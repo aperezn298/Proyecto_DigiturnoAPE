@@ -1,0 +1,115 @@
+// tipo empleado quemado
+  await TipoEmpleado.bulkCreate([
+    {codigo: "A", nombre: "Administrador"},
+    {codigo: "O", nombre: "Orientador"},
+  ])
+
+  // rol quemado
+  await Rol.bulkCreate([
+    {nombre: "Administrador"},
+    {nombre: "Orientador"},
+  ])
+
+// tipo usuario quemado
+  await TipoUsuario.bulkCreate([
+    {nombre: "Natural"},
+    {nombre: "Empresa"},
+  ])
+  // tipo poblacion quemado
+  await TipoPoblacion.bulkCreate([
+    {nombre: "Población Víctimas de la violencia"},
+    {nombre: "Población con discapacidad"},
+    {nombre: "Población Indígena"},
+    {nombre: "Población afrocolombiana"},
+    {nombre: "Población Comunidades Negras"},
+    {nombre: "Población Palenquera"},
+    {nombre: "Población Raizales"},
+    {nombre: "Población Privada de la Libertad"},
+    {nombre: "Población Víctimas de trata de personas"},
+    {nombre: "Tercera Edad"},
+    {nombre: "Población Adolescentes y Jóvenes Vulnerables"},
+    {nombre: "Población  en Conflicto con ley penal"},
+    {nombre: "Población Mujer Cabeza de Hogar"},
+    {nombre: "Población en Proceso de Reincorporación"},
+    {nombre: "Población en Proceso de Reintegración"},
+    {nombre: "Pueblo Rom"},
+    {nombre: "Población Víctimas Ataque con Agente Químicos"},
+    {nombre: "Ninguna"},
+  ])
+
+  // servicio quemado
+  await Servicio.create(
+    {
+      codigo: "RA",
+      nombre: "Registro en la APE",
+      descripcion: "Creación del usuario en la Agencia Pública de Empleo",
+      duracion: "00:02",
+      icono: "https://linkIconoRegistroAPEInventado.com.co"
+    },
+  )
+  // empleado quemado
+  await Empleado.create(
+    {
+      tipoDocumento: "CC",
+      numeroDocumento: "0000000000",
+      nombres: "Empleado Predeterminado",
+      apellidos: "Empleado Predeterminado",
+      correo: "correo.empleado.predeterminado@gmail.com",
+      telefono: "0000000000",
+      tipoId: 2 //el id del TipoEmpleado "Orientador" o "Empleado", en mi caso es 2
+    },
+  )
+
+  
+
+
+  // lo que muestra el turno 
+  {
+  "id": 24,
+  "codigo": "TZO001",
+  "fecha": "2024-11-24",
+  "horaCreacion": "21:19:37",
+  "horaAsignacion": null,
+  "horaFinalizacion": null,
+  "observacion": null,
+  "estado": "Espera",
+  "usuarioId": 26,
+  "empleadoId": 1,
+  "servicios": [
+    {
+      "id": 1,
+      "nombre": "Registro en la APE",
+      "estado": "Activo",
+      "servicioTurno": {
+        "id": 25,
+        "servicioId": 1,
+        "turnoId": 24
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Tenzion ",
+      "estado": "Activo",
+      "servicioTurno": {
+        "id": 26,
+        "servicioId": 3,
+        "turnoId": 24
+      }
+    }
+  ],
+  "usuario": {
+    "id": 26,
+    "tipoDocumento": "CC",
+    "numeroDocumento": "109412006",
+    "nombres": "angel",
+    "apellidos": "luna luna",
+    "correo": "s@gmail.com",
+    "estado": "Activo",
+    "tipoPoblacion": {
+      "nombre": "Población Palenquera"
+    },
+    "tipoUsuario": {
+      "nombre": "Natural"
+    }
+  }
+}

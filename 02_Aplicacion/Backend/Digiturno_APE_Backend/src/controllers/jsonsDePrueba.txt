@@ -1,0 +1,57 @@
+//CREAR EMPLEADO
+{
+"tipoDocumento": "CC",
+  "numeroDocumento": "1045212541",
+  "nombres": "James",
+  "apellidos": "Messi Cristiano",
+  "correo": "admin02@gmail.com",
+  "telefono": "3026512584",
+  "contrasena": "James123*",
+  "tipoId": "1"
+}
+
+//CREAR SERVICIO
+{
+  "codigo": "II",
+  "nombre": "Información Sobre Ingeniatec edición 54",
+  "descripcion": "Recibirá información acerca del evento que se dará el 15 de noviembre, donde podrá ser expositor de su proyecto",
+  "duracion": "00:35",
+  "icono": "https://soyunlinkdeunicono.com"
+}
+
+// CREAR TURNO Y USUARIO
+// Si el usuario existe, actualiza datos
+{
+  "tipoUsuarioId": 1,
+  "tipoDocumento": "RC",
+  "numeroDocumento": "3201254128",
+  "nombres": "Jose Siul",
+  "apellidos": "Ortiz Ñame",
+  "correo": "joselhhhhsjs.l@gmail.com",
+  "tipoPoblacionId": 7,
+  "servicioId": 2 //El servicio escogido por el usuario
+}
+
+//JSONS PARA CAMBIAR EL TURNO DEPENDIENDO EL ESTADO
+//SI SALE QUE EL ESTADO ES INVALIDO, ES PORQUE NO SIGUE LA PROGRESION LOGICA DE ESTADOS
+//ESPERA  (es necesario para actualizar la horaAsignacion y el empleado)
+{
+    "estado": "Espera",
+    "empleadoId": ?, //ID DEL EMPLEADO QUE VA A SUSTITUIR AL AMPLEADO PREDETERMINADO
+}
+//PROCESO 
+{
+    "estado": "Proceso",
+}
+//CANCELADO 
+{
+    "estado": "Cancelado",
+    //"observacion": "Hola soy una observacion", //campo opcional, puede agregarlo o no
+    "servicioIds": [?,?] //Ids de los servicios que se realizaron al final del servicio, debe haber al menos uno
+}
+//ATENDIDO 
+{
+    "estado": "Atendido",
+    //"observacion": "Hola soy una observacion", //campo opcional, puede agregarlo o no
+    "servicioIds": [?,?] //Ids de los servicios que se realizaron al final del servicio, debe haber al menos uno
+}

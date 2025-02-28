@@ -1,0 +1,15 @@
+#se debe utilizar una version de python superior a las 3.1 
+
+#Para correr el entorno virtual utiliza el siguiente comando 
+source  Digiturno-ape-backend/Scripts/activate
+
+#instalacion de modulos con el comando
+pip install modulo
+
+
+#para correr el servidor de uvicorn el siguiente comando
+uvicorn app.main:app
+
+#para que el servidor refleje los cambio automaticamente el siguiente comando
+uvicorn app.main:app --reload
+
